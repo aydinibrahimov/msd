@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4764fce4-04db-43ef-887f-00c67011d78f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/msd/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/msd/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,21 +35,25 @@
     </option>
   </component>
   <component name="ProjectId" id="2SEhJybxLdGwK4Bn6dAN5oLtW4r" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/msd&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;b0f2169aa609c42c1bc96d4aa5da3aea&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Admin/Documents/msd",
+    "list.type.of.created.stylesheet": "CSS",
+    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
+    "spring.configuration.checksum": "b0f2169aa609c42c1bc96d4aa5da3aea"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="MsdApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="msd" />
@@ -60,7 +73,7 @@
       <updated>1688717583215</updated>
       <workItem from="1688717584571" duration="86000" />
       <workItem from="1688719302129" duration="850000" />
-      <workItem from="1688728026813" duration="47000" />
+      <workItem from="1688728026813" duration="812000" />
     </task>
     <servers />
   </component>
