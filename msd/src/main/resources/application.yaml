@@ -11,7 +11,5 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-      globally_quoted_identifiers: true
     generate-ddl: true
 
