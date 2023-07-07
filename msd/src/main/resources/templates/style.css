@@ -7,3 +7,8 @@
 .l-navbar{
     width: 16%;
 }
+
+a:link{
+    text-decoration: none;
+
+}
