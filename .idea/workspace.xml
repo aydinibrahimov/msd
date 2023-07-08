@@ -43,19 +43,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Admin/Documents/msd",
-    "list.type.of.created.stylesheet": "CSS",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
-    "spring.configuration.checksum": "b0f2169aa609c42c1bc96d4aa5da3aea"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/msd&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;b0f2169aa609c42c1bc96d4aa5da3aea&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="MsdApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="msd" />
@@ -75,7 +75,8 @@
       <updated>1688717583215</updated>
       <workItem from="1688717584571" duration="86000" />
       <workItem from="1688719302129" duration="850000" />
-      <workItem from="1688728026813" duration="8906000" />
+      <workItem from="1688728026813" duration="11515000" />
+      <workItem from="1688785076431" duration="3839000" />
     </task>
     <servers />
   </component>
