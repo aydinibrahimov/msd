@@ -204,8 +204,7 @@ a:link {
 }
 
 #parent-op-set {
-    padding-left: 16%;
-    width: 100%;
+    margin-left: 16%;
     background-color: #4723D9;
     color: white;
     display: flex;
