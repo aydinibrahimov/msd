@@ -197,10 +197,10 @@ a:link {
     height: 55px;
     display: flex;
     width: 30%;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-
-
+    margin-right: 30px;
+    padding: 30px 30px
 }
 
 #parent-op-set {
