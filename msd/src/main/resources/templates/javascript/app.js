@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     function showNavbar(toggleId, navId, bodyId, headerId) {
         const toggle = $('#' + toggleId);
@@ -7,7 +7,7 @@ $(document).ready(function() {
         const headerpd = $('#' + headerId);
 
         if (toggle.length && nav.length && bodypd.length && headerpd.length) {
-            toggle.on('click', function() {
+            toggle.on('click', function () {
                 nav.toggleClass('show');
                 toggle.toggleClass('bx-x');
                 bodypd.toggleClass('body-pd');
@@ -29,6 +29,5 @@ $(document).ready(function() {
 
     linkColor.on('click', colorLink);
 
-    // Initialize DataTable
     $('#data-table').DataTable();
 });

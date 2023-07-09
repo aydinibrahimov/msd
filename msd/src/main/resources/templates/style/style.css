@@ -158,7 +158,6 @@ a {
     }
 
 
-
     .l-navbar {
         left: 0;
         padding: 1rem 1rem 0 0
@@ -174,7 +173,8 @@ a {
 }
 
 .nav_list {
-    background-color: #4723D9;
+    background-color: rgba(88, 99, 231, 0.18);
+   border-radius: 5px;
 
 }
 
@@ -197,7 +197,8 @@ a:link {
     margin-right: 30px;
 
 }
-#op-set button{
+
+#op-set button {
     width: 40px;
     height: 35px;
     border: #d1d1d1;
@@ -211,5 +212,10 @@ a:link {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-margin-left: -2%;
+    margin-left: -2%;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 100;
+    top: 0;
 }
+
