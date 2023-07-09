@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4764fce4-04db-43ef-887f-00c67011d78f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msd/src/main/resources/templates/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/msd/src/main/resources/templates/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msd/src/main/resources/templates/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/msd/src/main/resources/templates/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msd/src/main/resources/templates/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/msd/src/main/resources/templates/style/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +56,12 @@
     &quot;spring.configuration.checksum&quot;: &quot;b0f2169aa609c42c1bc96d4aa5da3aea&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Documents\msd\msd\src\main\resources\templates\javascript" />
+      <recent name="C:\Users\Admin\Documents\msd\msd\src\main\resources\templates\style" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="MsdApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="msd" />
@@ -77,11 +82,23 @@
       <workItem from="1688717584571" duration="86000" />
       <workItem from="1688719302129" duration="850000" />
       <workItem from="1688728026813" duration="11515000" />
-      <workItem from="1688785076431" duration="8317000" />
+      <workItem from="1688785076431" duration="9057000" />
+      <workItem from="1688878553822" duration="1036000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
