@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4764fce4-04db-43ef-887f-00c67011d78f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/entity/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msd/src/main/resources/templates/javascript/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/msd/src/main/resources/templates/javascript/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +20,7 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -84,7 +86,8 @@
       <workItem from="1688728026813" duration="11515000" />
       <workItem from="1688785076431" duration="9057000" />
       <workItem from="1688878553822" duration="2064000" />
-      <workItem from="1688890095882" duration="7628000" />
+      <workItem from="1688890095882" duration="9230000" />
+      <workItem from="1688953883889" duration="1706000" />
     </task>
     <servers />
   </component>

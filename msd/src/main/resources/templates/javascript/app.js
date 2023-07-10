@@ -29,22 +29,6 @@ $(document).ready(function () {
 
     linkColor.on('click', colorLink);
 
+    $('#data-table').DataTable();
 
-
-
-});
-$(document).ready(async function() {
-    const response = await fetch("https://fakestoreapi.com/products");
-    const json_data = await response.json();
-
-    $('#data-table').DataTable({
-        data: json_data,
-        columns: [
-            { title: "ID", data: "id" },
-            { title: "Title", data: "title" },
-            { title: "Category", data: "category" },
-            { title: "Price", data: "price" },
-            { title: "Description", data: "description" }
-        ]
-    });
 });
