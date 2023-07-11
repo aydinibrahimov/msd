@@ -2,19 +2,20 @@ package com.msd.msd.service;
 
 import com.msd.msd.entity.Product;
 import com.msd.msd.repository.ProductRepository;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class ProductService {
 
     private final ProductRepository productRepository;
 
-    public ProductService(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
+
 
 
     public List<Product> getAllProducts() {

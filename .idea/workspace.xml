@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4764fce4-04db-43ef-887f-00c67011d78f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msd/target/classes/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/MsdApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/entity/Client.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/entity/Contact.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/entity/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/entity/Vender.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/repository/ClientRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/repository/ContactRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/repository/ProductRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/repository/VenderReposotory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/service/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +100,7 @@
       <workItem from="1688878553822" duration="2064000" />
       <workItem from="1688890095882" duration="9230000" />
       <workItem from="1688953883889" duration="6601000" />
-      <workItem from="1689064274916" duration="7683000" />
+      <workItem from="1689064274916" duration="8047000" />
     </task>
     <servers />
   </component>
