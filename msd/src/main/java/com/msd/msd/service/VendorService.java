@@ -38,7 +38,7 @@ public class VendorService {
         return vendorReposotory.save(vendor);
     }
 
-    public Vendor updateVendor(Vendor vendor, Long id) {
+    public Vendor updateVendorById(Vendor vendor, Long id) {
         Optional<Vendor> v = vendorReposotory.findById(id);
         if (v.isPresent()) {
            return vendorReposotory.save(vendor);

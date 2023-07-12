@@ -2,7 +2,6 @@ package com.msd.msd.service;
 
 
 import com.msd.msd.entity.Contact;
-import com.msd.msd.repository.ClientRepository;
 import com.msd.msd.repository.ContactRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -37,7 +36,7 @@ public class ContactService {
     }
 
 
-    public Contact updateContact(Contact contact, Long id) {
+    public Contact updateContactById(Contact contact, Long id) {
         Optional<Contact> c = contactRepository.findById(id);
         if (c.isPresent()) {
             return contactRepository.save(contact);

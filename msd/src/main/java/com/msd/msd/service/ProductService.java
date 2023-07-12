@@ -3,7 +3,6 @@ package com.msd.msd.service;
 import com.msd.msd.entity.Product;
 import com.msd.msd.repository.ProductRepository;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -43,7 +42,7 @@ public class ProductService {
     }
 
 
-    public Product updateProduct(Product product, Long id) {
+    public Product updateProductById(Product product, Long id) {
         Optional<Product> p = productRepository.findById(id);
         if (p.isPresent()) {
            return productRepository.save(product);

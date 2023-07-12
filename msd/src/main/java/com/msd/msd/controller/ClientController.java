@@ -21,7 +21,7 @@ public class ClientController {
 
     @PutMapping("/{id}")
     public Client updateClient(@RequestBody Client client, @PathVariable Long id) {
-        return clientService.updateClient(client, id);
+        return clientService.updateClientById(client, id);
     }
 
     @DeleteMapping("/{id}")

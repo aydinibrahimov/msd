@@ -17,7 +17,7 @@ public class ClientService {
         return clientRepository.save(client);
     }
 
-    public Client updateClient(Client client, Long id) {
+    public Client updateClientById(Client client, Long id) {
         Optional<Client> c = clientRepository.findById(id);
         if (c.isPresent()) {
             return clientRepository.save(client);
