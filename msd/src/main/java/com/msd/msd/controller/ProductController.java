@@ -1,7 +1,6 @@
 package com.msd.msd.controller;
 
 import com.msd.msd.entity.Product;
-import com.msd.msd.repository.ProductRepository;
 import com.msd.msd.service.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +28,6 @@ public class ProductController {
     public void removeProduct(@PathVariable Long id) {
         productService.deleteProductById(id);
     }
-
 
 
     @GetMapping("/{id]")
