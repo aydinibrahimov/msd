@@ -14,7 +14,7 @@ import java.util.Optional;
 public class VenderService {
 
     private final VenderReposotory venderReposotory;
-    
+
     public List<Vender> getAllVenders() {
         return venderReposotory.findAll();
     }
@@ -25,7 +25,6 @@ public class VenderService {
     }
 
     public boolean deleteVenderById(Long id) {
-
         Optional<Vender> vender = venderReposotory.findById(id);
         if (vender.isPresent()) {
             venderReposotory.deleteById(id);
@@ -36,18 +35,17 @@ public class VenderService {
     }
 
     public Vender addVender(Vender vender) {
-        venderReposotory.save(vender);
-        return vender;
+        return venderReposotory.save(vender);
     }
 
-    public boolean updateVender(Vender vender, Long id) {
-        Optional<Vender> p = venderReposotory.findById(id);
-        if (p.isPresent()) {
-            venderReposotory.save(vender);
+    public Vender updateVender(Vender vender, Long id) {
+        Optional<Vender> v = venderReposotory.findById(id);
+        if (v.isPresent()) {
+           return venderReposotory.save(vender);
         } else {
-            p.orElseThrow(() -> new RuntimeException("Vender with ID= " + id + " does not exist"));
+           return v.orElseThrow(() -> new RuntimeException("Vender with ID= " + id + " does not exist"));
         }
-        return true;
+
     }
 
 
