@@ -37,7 +37,7 @@ public class ContactService {
     }
 
 
-    public Contact updateContact(Long id, Contact contact) {
+    public Contact updateContact(Contact contact,Long id ) {
         Optional<Contact> c = contactRepository.findById(id);
         if (c.isPresent()) {
             return contactRepository.save(contact);
