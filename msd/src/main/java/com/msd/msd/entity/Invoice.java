@@ -8,6 +8,8 @@ import lombok.ToString;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.util.List;
+
 @Entity
 @Table(name = "invoice")
 @Data
@@ -26,4 +28,8 @@ public class Invoice {
     private Client client;
 
 
+    @OneToMany(cascade = CascadeType.ALL,
+               mappedBy = "invoice",
+               fetch = FetchType.LAZY)
+    List<Order> orders;
 }

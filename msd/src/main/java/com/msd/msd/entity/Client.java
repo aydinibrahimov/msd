@@ -14,13 +14,13 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private  String name;
+    private String name;
 
 
     @OneToMany(cascade = CascadeType.ALL,
             fetch = FetchType.LAZY,
             mappedBy = "client")
-    List<Invoice> invoiceList;
+    List<Invoice> invoices;
 
 
 }
