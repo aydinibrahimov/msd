@@ -40,7 +40,7 @@ public class InvoiceService {
 
     public Invoice getInvoiceById(Long id) {
         return invoiceRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("It failed to find the invoice with the ID of " + id))
+                .orElseThrow(() -> new RuntimeException("It failed to find the invoice with the ID of " + id));
     }
 
     public List<Invoice> getAllInvoices() {
