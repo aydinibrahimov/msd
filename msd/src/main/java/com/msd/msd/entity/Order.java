@@ -7,6 +7,8 @@ import lombok.ToString;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.util.List;
+
 @Entity
 @Table(name = "order_list")
 @Data
@@ -23,6 +25,13 @@ public class Order {
     @OnDelete(action = OnDeleteAction.CASCADE)
     @ToString.Exclude
     private Invoice invoice;
+
+    @ManyToMany
+    @JoinTable(name = "product",
+    joinColumns = {@JoinColumn(name = "product_id")})
+
+    @ToString.Exclude
+    List<Product> products;
 
 
 }
