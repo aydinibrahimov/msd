@@ -9,13 +9,12 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/client")
+@RequestMapping("/msd/v1/clients")
 public class ClientController {
-
     private final ClientService clientService;
 
     @PostMapping
-    public Client insertClient(Client client) {
+    public Client insertClient(@RequestBody Client client) {
         return clientService.addClient(client);
     }
 
@@ -34,7 +33,7 @@ public class ClientController {
         return clientService.getClientbyId(id);
     }
 
-    @GetMapping("/list")
+    @GetMapping
     public List<Client> findAllClients() {
         return clientService.getAllClients();
     }

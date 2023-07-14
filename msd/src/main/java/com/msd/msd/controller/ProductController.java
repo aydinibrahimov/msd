@@ -9,7 +9,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/msd/v1/products")
 public class ProductController {
 
     private final ProductService productService;
@@ -35,7 +35,7 @@ public class ProductController {
         return productService.getProductById(id);
     }
 
-    @GetMapping("/list")
+    @GetMapping
     public List<Product> findAllProducts() {
         return productService.getAllProducts();
     }

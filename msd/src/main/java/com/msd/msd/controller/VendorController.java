@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/vendor")
+@RequestMapping("/msd/v1/vendors")
 @AllArgsConstructor
 public class VendorController {
     private final VendorService vendorService;
@@ -21,7 +21,7 @@ public class VendorController {
 
 
     @PutMapping("/{id}")
-    public Vendor updateVendor(Vendor vendor, @PathVariable Long id) {
+    public Vendor updateVendor(@RequestBody Vendor vendor, @PathVariable Long id) {
         return vendorService.updateVendorById(vendor, id);
     }
 
@@ -38,7 +38,7 @@ public class VendorController {
     }
 
 
-    @GetMapping("/list")
+    @GetMapping
     public List<Vendor> findAllVendors() {
         return vendorService.getAllVendors();
     }

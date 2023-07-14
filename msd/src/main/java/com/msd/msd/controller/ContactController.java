@@ -9,12 +9,12 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/contact")
+@RequestMapping("/msd/v1/contacts")
 public class ContactController {
     private final ContactService contactService;
 
     @PostMapping
-    public Contact insertContact(Contact contact) {
+    public Contact insertContact(@RequestBody Contact contact) {
         return contactService.addContact(contact);
     }
 
@@ -24,7 +24,7 @@ public class ContactController {
     }
 
     @DeleteMapping("/{id}")
-    public void rempveContact(@PathVariable Long id) {
+    public void removeContact(@PathVariable Long id) {
         contactService.deleteContactById(id);
     }
 
@@ -33,7 +33,7 @@ public class ContactController {
         return contactService.getContactById(id);
     }
 
-    @GetMapping("/list")
+    @GetMapping
     public List<Contact> findAllContacts() {
         return contactService.getAllContacts();
     }

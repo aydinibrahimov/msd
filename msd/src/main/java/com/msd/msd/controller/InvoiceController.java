@@ -8,26 +8,26 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/invoice")
+@RequestMapping("/msd/v1/invoices")
 @AllArgsConstructor
 public class InvoiceController {
     private final InvoiceService invoiceService;
 
 
     @PostMapping
-    public Invoice insertInvoice(Invoice invoice) {
+    public Invoice insertInvoice(@RequestBody Invoice invoice) {
         return invoiceService.addInvoice(invoice);
     }
 
 
-    @PutMapping
-    public Invoice updateInvoice(Invoice invoice, Long id) {
+    @PutMapping("/{id}")
+    public Invoice updateInvoice(@RequestBody Invoice invoice, @PathVariable Long id) {
         return invoiceService.updateInvoiceById(invoice, id);
     }
 
 
-    @DeleteMapping
-    public void removeInvoice(Long id) {
+    @DeleteMapping("/{id}")
+    public void removeInvoice(@PathVariable Long id) {
         invoiceService.deleteInvoiceById(id);
     }
 
@@ -38,7 +38,7 @@ public class InvoiceController {
     }
 
 
-    @GetMapping("/list")
+    @GetMapping
     public List<Invoice> findAllInvoices() {
         return invoiceService.getAllInvoices();
     }

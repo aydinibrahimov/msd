@@ -8,36 +8,36 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/order")
+@RequestMapping("/msd/v1/orders")
 @AllArgsConstructor
 public class OrderController {
 
     private final OrderService orderService;
 
     @PostMapping
-    public Order insertOrder(Order order) {
+    public Order insertOrder(@RequestBody Order order) {
         return orderService.addOrder(order);
     }
 
 
-    @PutMapping
-    public Order updateOrder(Order order, Long id) {
+    @PutMapping("/{id}")
+    public Order updateOrder(@RequestBody Order order, @PathVariable Long id) {
         return orderService.updateOrderById(order, id);
     }
 
 
-    @DeleteMapping
-    public void removeOrder(Long id) {
+    @DeleteMapping("/{id}")
+    public void removeOrder(@PathVariable Long id) {
         orderService.deletOrderById(id);
     }
 
 
     @GetMapping("/{id}")
-    public Order findorderById(@PathVariable Long id) {
+    public Order findOrderById(@PathVariable Long id) {
         return orderService.getOrderById(id);
     }
 
-    @GetMapping("/list")
+    @GetMapping
     public List<Order> findAllOrders() {
         return orderService.getAllOrders();
     }

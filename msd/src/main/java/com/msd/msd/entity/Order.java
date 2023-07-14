@@ -28,8 +28,7 @@ public class Order {
 
     @ManyToMany
     @JoinTable(name = "product",
-    joinColumns = {@JoinColumn(name = "product_id")})
-
+            joinColumns = {@JoinColumn(name = "product_id")})
     @ToString.Exclude
     List<Product> products;
 
