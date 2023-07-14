@@ -12,7 +12,6 @@ import java.util.List;
 @Entity
 @Table(name = "order_list")
 @Data
-@ToString
 public class Order {
 
     @Id
