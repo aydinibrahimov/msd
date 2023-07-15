@@ -3,6 +3,7 @@ package com.msd.msd.service;
 import com.msd.msd.entity.Client;
 import com.msd.msd.repository.ClientRepository;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.Optional;
 
 @Service
 @AllArgsConstructor
+@Slf4j
 public class ClientService {
     private final ClientRepository clientRepository;
 
@@ -22,6 +24,7 @@ public class ClientService {
         if (c.isPresent()) {
             return clientRepository.save(client);
         } else {
+            log.info("Client with id=" + id + " was not found");
             return c.orElseThrow(() -> new RuntimeException("Client with id=" + id + " was not found"));
         }
     }
@@ -31,6 +34,7 @@ public class ClientService {
         if (client.isPresent()) {
             clientRepository.deleteById(id);
         } else {
+            log.info("Client with id=" + id + " was not found");
             client.orElseThrow(() -> new RuntimeException("Client with id=" + id + " was not found"));
         }
 

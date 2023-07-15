@@ -6,6 +6,9 @@ com\msd\msd\repository\VendorReposotory.class
 com\msd\msd\entity\Order.class
 com\msd\msd\controller\ContactController.class
 com\msd\msd\service\ClientService.class
+com\msd\msd\service\DictionaryService.class
+com\msd\msd\repository\DictionaryTypeRepository.class
+com\msd\msd\repository\DictionaryRepository.class
 com\msd\msd\entity\Contact.class
 com\msd\msd\controller\InvoiceController.class
 com\msd\msd\controller\ProductController.class
