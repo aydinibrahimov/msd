@@ -30,7 +30,7 @@ public class ClientController {
 
     @GetMapping("/{id}")
     public Client findClientById(@PathVariable Long id) {
-        return clientService.getClientbyId(id);
+        return clientService.getClientById(id);
     }
 
     @GetMapping
