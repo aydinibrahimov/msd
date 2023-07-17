@@ -24,7 +24,7 @@ public class ClientService {
         if (c.isPresent()) {
             return clientRepository.save(client);
         } else {
-            log.info("Client with id=" + id + " was not found");
+            log.info("Client with id={}" + id + " was not found");
             return c.orElseThrow(() -> new RuntimeException("Client with id=" + id + " was not found"));
         }
     }
@@ -34,15 +34,21 @@ public class ClientService {
         if (client.isPresent()) {
             clientRepository.deleteById(id);
         } else {
-            log.info("Client with id=" + id + " was not found");
-            client.orElseThrow(() -> new RuntimeException("Client with id=" + id + " was not found"));
+            log.warn("Client with id{} "+id+" was not found");
+            //client.orElseThrow(() -> new RuntimeException("Client with id=" + id + " was not found"));
         }
 
     }
 
     public Client getClientbyId(Long id) {
-        return clientRepository
-                .findById(id).orElseThrow(() -> new RuntimeException("Client with id=" + id + " was not found"));
+        Optional<Client> client= clientRepository.findById(id);
+        if (client.isPresent()){
+            log.warn("Client with id{} "+id+" was found");
+            return client.get();
+        }else{
+            log.warn("Client with id{} "+id+" was not found");
+        }
+       return client.orElseThrow();
     }
 
     public List<Client> getAllClients() {

@@ -13,9 +13,9 @@ spring:
       ddl-auto: update
     generate-ddl: true
 
-logging:
-  level:
-    root: info
-    org.springframework.web: info
-    com.msd: debug
-    org.hibernate: info
+#logging:
+#  level:
+#    root: info
+#    org.springframework.web: info
+#    com.msd: debug
+#    org.hibernate: info
