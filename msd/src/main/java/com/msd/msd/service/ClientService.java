@@ -39,22 +39,21 @@ public class ClientService {
         if (client.isPresent()) {
             clientRepository.deleteById(id);
         } else {
-            log.warn("Client with id{} "+id+" was not found");
+            log.warn("Client with id{} " + id + " was not found");
             //client.orElseThrow(() -> new RuntimeException("Client with id=" + id + " was not found"));
         }
 
     }
 
     public Client getClientById(Long id) {
-        Optional<Client> client= clientRepository.findById(id);
-        msd_logging.saveLog(new Client());
-        if (client.isPresent()){
-            log.info("Client with id-"+id+" was fetched");
+        Optional<Client> client = clientRepository.findById(id);
+        if (client.isPresent()) {
+            log.info("Client with id-" + id + " was fetched");
             return client.get();
-        }else{
-            log.warn("Client with id-"+id+" was not found");
+        } else {
+            log.warn("Client with id-" + id + " was not found");
         }
-       return client.orElseThrow();
+        return client.orElseThrow();
     }
 
     public List<Client> getAllClients() {
