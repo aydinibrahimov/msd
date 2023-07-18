@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4764fce4-04db-43ef-887f-00c67011d78f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/enums/ClientErrorCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/logging/MSD_Logging.java" beforeDir="false" afterPath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/logging/MSD_Logging.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/service/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msd/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/msd/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/entity/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/entity/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/logging/MSD_Logging.class" beforeDir="false" afterPath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/logging/MSD_Logging.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/service/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/msd/target/classes/com/msd/msd/service/ClientService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +28,7 @@
         <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -145,7 +151,7 @@
       <workItem from="1689489611114" duration="4000" />
       <workItem from="1689505145858" duration="684000" />
       <workItem from="1689618720341" duration="3297000" />
-      <workItem from="1689658560051" duration="6620000" />
+      <workItem from="1689658560051" duration="9480000" />
     </task>
     <servers />
   </component>
