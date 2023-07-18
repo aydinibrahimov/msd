@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4764fce4-04db-43ef-887f-00c67011d78f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/logging/MSD_Logging.java" beforeDir="false" afterPath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/logging/MSD_Logging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/msd/src/main/java/com/msd/msd/service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msd/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/msd/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +30,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/controller/ContactController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/controller/ProductController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/controller/VendorController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/entity/Client.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/entity/Contact.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/entity/Product.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/entity/Vender.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/entity/Vendor.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/repository/ProductRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/repository/VenderReposotory.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/repository/VendorReposotory.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/service/ContactService.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/service/ProductService.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/msd/src/main/java/com/msd/msd/service/VendorService.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/msd/src/main/resources/application.yaml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -56,13 +65,17 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/msd&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;b0f2169aa609c42c1bc96d4aa5da3aea&quot;
   }
 }</component>
@@ -72,19 +85,39 @@
       <recent name="C:\Users\Admin\Documents\msd\msd\src\main\resources\templates\style" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.msd.msd.service" />
       <recent name="com.msd.msd.repository" />
+      <recent name="com.msd.msd.controller" />
+      <recent name="com.msd.msd.service" />
       <recent name="com.msd.msd.entity" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.MsdApplication">
+    <configuration name="MSD_Logging" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.msd.msd.logging.MSD_Logging" />
+      <module name="msd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.msd.msd.logging.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MsdApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
       <module name="msd" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.msd.msd.MsdApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MSD_Logging" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -101,7 +134,18 @@
       <workItem from="1688878553822" duration="2064000" />
       <workItem from="1688890095882" duration="9230000" />
       <workItem from="1688953883889" duration="6601000" />
-      <workItem from="1689064274916" duration="12925000" />
+      <workItem from="1689064274916" duration="13310000" />
+      <workItem from="1689129612331" duration="6492000" />
+      <workItem from="1689171642334" duration="30000" />
+      <workItem from="1689171804343" duration="9527000" />
+      <workItem from="1689241096121" duration="12888000" />
+      <workItem from="1689319263363" duration="11229000" />
+      <workItem from="1689403422652" duration="6326000" />
+      <workItem from="1689479596524" duration="4542000" />
+      <workItem from="1689489611114" duration="4000" />
+      <workItem from="1689505145858" duration="684000" />
+      <workItem from="1689618720341" duration="3297000" />
+      <workItem from="1689658560051" duration="6620000" />
     </task>
     <servers />
   </component>
@@ -118,5 +162,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -47,6 +47,7 @@ public class ClientService {
 
     public Client getClientById(Long id) {
         Optional<Client> client = clientRepository.findById(id);
+        msd_logging.saveLog(client.get());
         if (client.isPresent()) {
             log.info("Client with id-" + id + " was fetched");
             return client.get();

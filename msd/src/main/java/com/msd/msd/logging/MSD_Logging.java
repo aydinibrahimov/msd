@@ -10,8 +10,19 @@ import java.util.Optional;
 @Slf4j
 @Component
 public class MSD_Logging {
+//    public static void main(String[] args) {
+//        saveLog(new MSD_Logging());
+//    }
+
     public void saveLog(Object obj) {
-        log.info(obj.getClass().getName() + " is working in. . . ");
+       String className=getClassName(obj);
+        log.info( className+ " is saved. . . ");
+    }
+
+    private static String getClassName(Object obj){
+        String fullClassName=obj.getClass().getName();
+        String className=fullClassName.substring(obj.toString().lastIndexOf('.')+1);
+        return className;
     }
 
 
