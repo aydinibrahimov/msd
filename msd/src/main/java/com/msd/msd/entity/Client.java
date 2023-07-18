@@ -3,6 +3,7 @@ package com.msd.msd.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class Client {
     @OneToMany(cascade = CascadeType.ALL,
             fetch = FetchType.LAZY,
             mappedBy = "client")
+    @ToString.Exclude
     List<Invoice> invoices;
 
 
