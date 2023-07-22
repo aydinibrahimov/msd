@@ -1,5 +1,6 @@
 package com.msd.msd.rest.model.response;
 
+import com.msd.msd.rest.model.dto.ClientDTO;
 import lombok.*;
 
 import java.util.List;
@@ -10,5 +11,5 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ClientResponse {
-    List<ClientResponse>  clients;
+    List<ClientDTO>  clients;
 }

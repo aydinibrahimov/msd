@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -60,18 +61,26 @@ public class ClientService {
         return client.orElseThrow();
     }
 
-    public List<ClientResponse> getAllClients() {
+    public ClientResponse getAllClients() {
         log.info("Clients' list is taking");
-        ClientDTO clientDTO = clientRepository.findAll()
+        List<ClientDTO> clientDTOList = clientRepository.findAll()
                 .stream()
-                .map(BeanUtils.copyProperties(););
+                .map(clients -> convertToDTO(clients))
+                .collect(Collectors.toList());
+        return makeClientResponse(clientDTOList);
     }
 
 
     private ClientDTO convertToDTO(Client client) {
         ClientDTO clientDTO = new ClientDTO();
-        BeanUtils.copyProperties(client,clientDTO);
+        BeanUtils.copyProperties(client, clientDTO);
         return clientDTO;
+    }
+
+    private ClientResponse makeClientResponse(List<ClientDTO> clientDTOList) {
+        return ClientResponse.builder()
+                .clients(clientDTOList)
+                .build();
     }
 
 }

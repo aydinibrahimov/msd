@@ -1,6 +1,7 @@
 package com.msd.msd.controller;
 
 import com.msd.msd.entity.Client;
+import com.msd.msd.rest.model.response.ClientResponse;
 import com.msd.msd.service.ClientService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -34,7 +35,7 @@ public class ClientController {
     }
 
     @GetMapping
-    public List<Client> findAllClients() {
+    public ClientResponse findAllClients() {
         return clientService.getAllClients();
     }
 
