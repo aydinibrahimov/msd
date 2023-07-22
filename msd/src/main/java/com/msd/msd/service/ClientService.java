@@ -3,8 +3,11 @@ package com.msd.msd.service;
 import com.msd.msd.entity.Client;
 import com.msd.msd.logging.MSD_Logging;
 import com.msd.msd.repository.ClientRepository;
+import com.msd.msd.rest.model.dto.ClientDTO;
+import com.msd.msd.rest.model.response.ClientResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -57,10 +60,18 @@ public class ClientService {
         return client.orElseThrow();
     }
 
-    public List<Client> getAllClients() {
+    public List<ClientResponse> getAllClients() {
         log.info("Clients' list is taking");
-        return clientRepository.findAll();
+        ClientDTO clientDTO = clientRepository.findAll()
+                .stream()
+                .map(BeanUtils.copyProperties(););
     }
 
+
+    private ClientDTO convertToDTO(Client client) {
+        ClientDTO clientDTO = new ClientDTO();
+        BeanUtils.copyProperties(client,clientDTO);
+        return clientDTO;
+    }
 
 }
