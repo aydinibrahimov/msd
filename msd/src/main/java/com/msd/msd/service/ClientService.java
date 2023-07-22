@@ -1,6 +1,8 @@
 package com.msd.msd.service;
 
 import com.msd.msd.entity.Client;
+import com.msd.msd.enums.CustomErrorCode;
+import com.msd.msd.exception.CustomException;
 import com.msd.msd.logging.MSD_Logging;
 import com.msd.msd.repository.ClientRepository;
 import com.msd.msd.rest.model.dto.ClientDTO;
@@ -11,7 +13,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -21,44 +22,32 @@ public class ClientService {
     private final ClientRepository clientRepository;
     private final MSD_Logging msd_logging;
 
-    public Client addClient(Client client) {
-        log.info("Client is working in. . . ");
+    public Client addClient(ClientDTO clientDTO) {
+        Client client = new Client();
+        BeanUtils.copyProperties(clientDTO, client);
+        log.info("Client is been saving . . . ");
         return clientRepository.save(client);
 
     }
 
-    public Client updateClientById(Client client, Long id) {
-        Optional<Client> c = clientRepository.findById(id);
-        if (c.isPresent()) {
-            return clientRepository.save(client);
-        } else {
-            log.info("Client with id={}" + id + " was not found");
-            return c.orElseThrow(() -> new RuntimeException("Client with id=" + id + " was not found"));
-        }
+    public ClientDTO updateClientById(ClientDTO clientDTO, Long id) {
+        Client client = getClient(id);
+        client.setName(clientDTO.getName());
+        clientRepository.save(client);
+        return convertToDTO(client);
     }
+
 
     public void deleteClient(Long id) {
-        Optional<Client> client = clientRepository.findById(id);
-
-        if (client.isPresent()) {
-            clientRepository.deleteById(id);
-        } else {
-            log.warn("Client with id{} " + id + " was not found");
-            //client.orElseThrow(() -> new RuntimeException("Client with id=" + id + " was not found"));
-        }
+        clientRepository.delete(getClient(id));
 
     }
 
-    public Client getClientById(Long id) {
-        Optional<Client> client = clientRepository.findById(id);
-        msd_logging.saveLog(client.get());
-        if (client.isPresent()) {
-            log.info("Client with id-" + id + " was fetched");
-            return client.get();
-        } else {
-            log.warn("Client with id-" + id + " was not found");
-        }
-        return client.orElseThrow();
+    public ClientDTO getClientById(Long id) {
+        Client client = clientRepository.findById(id)
+                .orElseThrow(() -> new CustomException(CustomErrorCode.CLIENT_NOT_FOUND));
+        return convertToDTO(client);
+
     }
 
     public ClientResponse getAllClients() {
@@ -70,6 +59,10 @@ public class ClientService {
         return makeClientResponse(clientDTOList);
     }
 
+    private Client getClient(Long id) {
+        return clientRepository.findById(id)
+                .orElseThrow(() -> new CustomException(CustomErrorCode.CLIENT_NOT_FOUND));
+    }
 
     private ClientDTO convertToDTO(Client client) {
         ClientDTO clientDTO = new ClientDTO();
