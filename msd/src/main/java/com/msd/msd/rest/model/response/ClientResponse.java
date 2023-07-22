@@ -5,11 +5,11 @@ import lombok.*;
 
 import java.util.List;
 
-@Getter
-@Setter
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class ClientResponse {
     List<ClientDTO>  clients;
 }
