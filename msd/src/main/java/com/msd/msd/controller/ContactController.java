@@ -1,6 +1,7 @@
 package com.msd.msd.controller;
 
 import com.msd.msd.entity.Contact;
+import com.msd.msd.rest.model.dto.ContactDTO;
 import com.msd.msd.service.ContactService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +15,7 @@ public class ContactController {
     private final ContactService contactService;
 
     @PostMapping
-    public Contact insertContact(@RequestBody Contact contact) {
+    public ContactDTO insertContact(@RequestBody Contact contact) {
         return contactService.addContact(contact);
     }
 
