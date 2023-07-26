@@ -1,8 +1,10 @@
 package com.msd.msd.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
 @Table(name = "contact")
 public class Contact {
     @Id

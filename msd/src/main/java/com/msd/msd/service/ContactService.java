@@ -27,7 +27,7 @@ public class ContactService {
 
 
     public Contact getContactById(Long id) {
-        log.info("Contact with id{} is getting",id);
+        log.info("Contact with id{} is getting", id);
         return contactRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Contact with id=" + id + " was not found"));
     }
@@ -43,12 +43,12 @@ public class ContactService {
     }
 
 
-    public Contact updateContactById(Contact contact, Long id) {
-        Optional<Contact> c = contactRepository.findById(id);
-        if (c.isPresent()) {
-            return contactRepository.save(contact);
-        }
-        return c.orElseThrow(() -> new RuntimeException("Contact with id=" + id + " was not found"));
+    public ContactDTO updateContactById(ContactDTO contactDTO, Long id) {
+        Contact contact = getContact(id);
+        contact.setContact(contactDTO.getContact());
+        contactRepository.save(contact);
+        return convertToDTO(contact);
+
     }
 
 
