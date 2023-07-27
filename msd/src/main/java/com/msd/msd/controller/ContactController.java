@@ -20,8 +20,8 @@ public class ContactController {
     }
 
     @PutMapping("/{id}")
-    public Contact updateContact(@RequestBody Contact contact, @PathVariable Long id) {
-        return contactService.updateContactById(contact, id);
+    public ContactDTO updateContact(@RequestBody ContactDTO contactDTO, @PathVariable Long id) {
+        return contactService.updateContactById(contactDTO, id);
     }
 
     @DeleteMapping("/{id}")

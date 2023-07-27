@@ -34,12 +34,7 @@ public class ContactService {
 
 
     public void deleteContactById(Long id) {
-        Optional<Contact> contact = contactRepository.findById(id);
-        if (contact.isPresent()) {
-            contactRepository.deleteById(id);
-        } else {
-            contact.orElseThrow(() -> new RuntimeException("Contact with id=" + id + " was not found"));
-        }
+        contactRepository.delete(getContact(id));
     }
 
 
