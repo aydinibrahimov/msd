@@ -12,7 +12,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -40,7 +39,9 @@ public class ContactService {
 
     public ContactDTO updateContactById(ContactDTO contactDTO, Long id) {
         Contact contact = getContact(id);
+        log.info("Contact with id{} is uodated", id);
         contact.setContact(contactDTO.getContact());
+        contact.setContactType(contact.getContactType());
         contactRepository.save(contact);
         return convertToDTO(contact);
 
@@ -48,14 +49,15 @@ public class ContactService {
 
 
     public ContactDTO addContact(ContactDTO contactDTO) {
-        Contact contact=new Contact();
-        BeanUtils.copyProperties(contactDTO,contact);
+        Contact contact = new Contact();
+        BeanUtils.copyProperties(contactDTO, contact);
+        log.info("Contact is been saving . . . ");
         contactRepository.save(contact);
         return convertToDTO(contact);
 
     }
 
-}
+
 
     private Contact getContact(Long id) {
         return contactRepository.findById(id)
