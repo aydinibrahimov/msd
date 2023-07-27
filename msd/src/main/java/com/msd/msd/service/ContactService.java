@@ -47,8 +47,12 @@ public class ContactService {
     }
 
 
-    public ContactDTO addContact(Contact contact) {
-        return contactRepository.save(contact);
+    public ContactDTO addContact(ContactDTO contactDTO) {
+        Contact contact=new Contact();
+        BeanUtils.copyProperties(contactDTO,contact);
+        contactRepository.save(contact);
+        return convertToDTO(contact);
+
     }
 
 }

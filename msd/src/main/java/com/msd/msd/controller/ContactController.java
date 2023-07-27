@@ -15,8 +15,8 @@ public class ContactController {
     private final ContactService contactService;
 
     @PostMapping
-    public ContactDTO insertContact(@RequestBody Contact contact) {
-        return contactService.addContact(contact);
+    public ContactDTO insertContact(@RequestBody ContactDTO contactDTO) {
+        return contactService.addContact(contactDTO);
     }
 
     @PutMapping("/{id}")
