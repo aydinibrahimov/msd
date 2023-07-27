@@ -6,12 +6,14 @@ import com.msd.msd.enums.CustomErrorCode;
 import com.msd.msd.exception.CustomException;
 import com.msd.msd.repository.ContactRepository;
 import com.msd.msd.rest.model.dto.ContactDTO;
+import com.msd.msd.rest.model.response.ContactResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -20,15 +22,20 @@ public class ContactService {
 
     private final ContactRepository contactRepository;
 
-    public List<Contact> getAllContacts() {
-        return contactRepository.findAll();
+    public ContactResponse getAllContacts() {
+        List<ContactDTO> contactDTOList = contactRepository.findAll()
+                .stream()
+                .map(contacts -> convertToDTO(contacts))
+                .collect(Collectors.toList());
+
+        return makeContactResponse(contactDTOList);
     }
 
 
-    public Contact getContactById(Long id) {
+    public ContactDTO getContactById(Long id) {
         log.info("Contact with id{} is getting", id);
-        return contactRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Contact with id=" + id + " was not found"));
+
+        return convertToDTO(getContact(id));
     }
 
 
@@ -58,7 +65,6 @@ public class ContactService {
     }
 
 
-
     private Contact getContact(Long id) {
         return contactRepository.findById(id)
                 .orElseThrow(() -> new CustomException(CustomErrorCode.CONTACT_NOT_FOUND));
@@ -68,6 +74,13 @@ public class ContactService {
         ContactDTO contactDTO = new ContactDTO();
         BeanUtils.copyProperties(contact, contactDTO);
         return contactDTO;
+    }
+
+    private ContactResponse makeContactResponse(List<ContactDTO> contactDTOList) {
+        return ContactResponse.builder()
+                .contacts(contactDTOList)
+                .build();
+
     }
 
 }

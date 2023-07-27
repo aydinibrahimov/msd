@@ -2,6 +2,7 @@ package com.msd.msd.controller;
 
 import com.msd.msd.entity.Contact;
 import com.msd.msd.rest.model.dto.ContactDTO;
+import com.msd.msd.rest.model.response.ContactResponse;
 import com.msd.msd.service.ContactService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -30,12 +31,12 @@ public class ContactController {
     }
 
     @GetMapping("/{id}")
-    public Contact findContactById(@PathVariable Long id) {
+    public ContactDTO findContactById(@PathVariable Long id) {
         return contactService.getContactById(id);
     }
 
     @GetMapping
-    public List<Contact> findAllContacts() {
+    public ContactResponse findAllContacts() {
         return contactService.getAllContacts();
     }
 }
