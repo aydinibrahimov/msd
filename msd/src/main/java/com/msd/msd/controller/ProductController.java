@@ -2,6 +2,7 @@ package com.msd.msd.controller;
 
 import com.msd.msd.entity.Product;
 import com.msd.msd.rest.model.dto.ProductDTO;
+import com.msd.msd.rest.model.response.ProductResponse;
 import com.msd.msd.service.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -37,7 +38,7 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<Product> findAllProducts() {
+    public ProductResponse findAllProducts() {
         return productService.getAllProducts();
     }
 }

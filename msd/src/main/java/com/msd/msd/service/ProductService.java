@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -20,8 +21,11 @@ public class ProductService {
     private final ProductRepository productRepository;
 
 
-    public List<Product> getAllProducts() {
-        return productRepository.findAll();
+    public ProductResponse getAllProducts() {
+        List<ProductDTO> productDTOList=productRepository.findAll()
+                .stream()
+                .map(products -> convertToProductDTO(products))
+                .collect(Collectors.toList());
     }
 
 
