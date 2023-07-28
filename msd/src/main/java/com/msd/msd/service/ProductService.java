@@ -1,6 +1,8 @@
 package com.msd.msd.service;
 
 import com.msd.msd.entity.Product;
+import com.msd.msd.enums.CustomErrorCode;
+import com.msd.msd.exception.CustomException;
 import com.msd.msd.repository.ProductRepository;
 import com.msd.msd.rest.model.dto.ProductDTO;
 import com.msd.msd.rest.model.response.ProductResponse;
@@ -23,9 +25,8 @@ public class ProductService {
     }
 
 
-    public Product getProductById(Long id) {
-        return productRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Product with ID= " + id + " does not exist"));
+    public ProductDTO getProductById(Long id) {
+        return convertToProductDTO(getProduct(id));
     }
 
 
@@ -54,6 +55,11 @@ public class ProductService {
         }
     }
 
+
+    private Product getProduct(Long id) {
+        return productRepository.findById(id)
+                .orElseThrow(() -> new CustomException(CustomErrorCode.PRODUCT_NOT_FOUND));
+    }
 
     private ProductDTO convertToProductDTO(Product product) {
         ProductDTO productDTO = new ProductDTO();

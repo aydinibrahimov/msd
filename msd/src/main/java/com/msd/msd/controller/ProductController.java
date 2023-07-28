@@ -1,6 +1,7 @@
 package com.msd.msd.controller;
 
 import com.msd.msd.entity.Product;
+import com.msd.msd.rest.model.dto.ProductDTO;
 import com.msd.msd.service.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -31,7 +32,7 @@ public class ProductController {
 
 
     @GetMapping("/{id}")
-    public Product findProductById(@PathVariable Long id) {
+    public ProductDTO findProductById(@PathVariable Long id) {
         return productService.getProductById(id);
     }
 
