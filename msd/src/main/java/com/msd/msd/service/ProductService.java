@@ -31,18 +31,15 @@ public class ProductService {
 
 
     public void deleteProductById(Long id) {
-        Optional<Product> product = productRepository.findById(id);
-        if (product.isPresent()) {
-            productRepository.deleteById(id);
-        } else {
-            product.orElseThrow(() -> new RuntimeException("Product with ID= " + id + " does not exist"));
-        }
-
+        productRepository.delete(getProduct(id));
     }
 
 
-    public Product addProduct(Product product) {
-        return productRepository.save(product);
+    public ProductDTO addProduct(ProductDTO productDTO) {
+        Product product = new Product();
+        BeanUtils.copyProperties(productDTO, product);
+        productRepository.save(product);
+        return productDTO;
     }
 
 
