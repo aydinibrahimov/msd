@@ -43,13 +43,12 @@ public class ProductService {
     }
 
 
-    public Product updateProductById(Product product, Long id) {
-        Optional<Product> p = productRepository.findById(id);
-        if (p.isPresent()) {
-            return productRepository.save(product);
-        } else {
-            return p.orElseThrow(() -> new RuntimeException("Product with ID= " + id + " does not exist"));
-        }
+    public ProductDTO updateProductById(ProductDTO productDTO, Long id) {
+        Product product = getProduct(id);
+        product.setName(productDTO.getName());
+        product.setDescription(productDTO.getDescription());
+        productRepository.save(product);
+        return productDTO;
     }
 
 
