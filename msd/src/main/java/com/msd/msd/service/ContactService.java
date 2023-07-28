@@ -46,7 +46,7 @@ public class ContactService {
 
     public ContactDTO updateContactById(ContactDTO contactDTO, Long id) {
         Contact contact = getContact(id);
-        log.info("Contact with id{} is uodated", id);
+        log.info("Contact with id{} is updated", id);
         contact.setContact(contactDTO.getContact());
         contact.setContactType(contact.getContactType());
         contactRepository.save(contact);
