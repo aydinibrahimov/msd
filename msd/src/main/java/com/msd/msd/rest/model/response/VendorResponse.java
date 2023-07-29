@@ -1,6 +1,5 @@
 package com.msd.msd.rest.model.response;
 
-import com.msd.msd.rest.model.dto.ProductDTO;
 import com.msd.msd.rest.model.dto.VendorDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

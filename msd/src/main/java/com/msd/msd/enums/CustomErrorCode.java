@@ -13,6 +13,7 @@ public enum CustomErrorCode {
     ACCESS_DENIED(103, " access denied"),
     CONTACT_NOT_FOUND(104, "Contact with id was not found"),
     PRODUCT_NOT_FOUND(105, "Product with id was not found"),
+    VENDOR_NOT_FOUND(106, "Vendor with id was not found"),
 
     ;
 

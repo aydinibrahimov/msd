@@ -2,6 +2,8 @@ package com.msd.msd.service;
 
 
 import com.msd.msd.entity.Vendor;
+import com.msd.msd.enums.CustomErrorCode;
+import com.msd.msd.exception.CustomException;
 import com.msd.msd.repository.VendorReposotory;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -41,12 +43,16 @@ public class VendorService {
     public Vendor updateVendorById(Vendor vendor, Long id) {
         Optional<Vendor> v = vendorReposotory.findById(id);
         if (v.isPresent()) {
-           return vendorReposotory.save(vendor);
+            return vendorReposotory.save(vendor);
         } else {
-           return v.orElseThrow(() -> new RuntimeException("Vendor with ID= " + id + " does not exist"));
+            return v.orElseThrow(() -> new RuntimeException("Vendor with ID= " + id + " does not exist"));
         }
 
     }
 
+    private Vendor getVendor(Long id) {
+        return vendorReposotory.findById(id)
+                .orElseThrow(() -> new CustomException(CustomErrorCode.VENDOR_NOT_FOUND));
+    }
 
 }
