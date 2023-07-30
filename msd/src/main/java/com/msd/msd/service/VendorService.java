@@ -28,28 +28,23 @@ public class VendorService {
         return convertToVendorDTO(getVendor(id));
     }
 
-    public boolean deleteVendorById(Long id) {
-        Optional<Vendor> vendor = vendorReposotory.findById(id);
-        if (vendor.isPresent()) {
-            vendorReposotory.deleteById(id);
-        } else {
-            vendor.orElseThrow(() -> new RuntimeException("Vendor with ID= " + id + " does not exist"));
-        }
-        return true;
+    public void deleteVendorById(Long id) {
+        vendorReposotory.delete(getVendor(id));
+
     }
 
-    public Vendor addVendor(Vendor vendor) {
-        return vendorReposotory.save(vendor);
+    public VendorDTO addVendor(VendorDTO vendorDTO) {
+        Vendor vendor = new Vendor();
+        vendor.setName(vendorDTO.getName());
+        vendorReposotory.save(vendor);
+        return vendorDTO;
     }
 
-    public Vendor updateVendorById(Vendor vendor, Long id) {
-        Optional<Vendor> v = vendorReposotory.findById(id);
-        if (v.isPresent()) {
-            return vendorReposotory.save(vendor);
-        } else {
-            return v.orElseThrow(() -> new RuntimeException("Vendor with ID= " + id + " does not exist"));
-        }
-
+    public VendorDTO updateVendorById(VendorDTO vendorDTO, Long id) {
+        Vendor vendor = getVendor(id);
+        vendor.setName(vendorDTO.getName());
+        vendorReposotory.save(vendor);
+        return vendorDTO;
     }
 
     private Vendor getVendor(Long id) {

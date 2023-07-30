@@ -16,14 +16,14 @@ public class VendorController {
 
 
     @PostMapping
-    public Vendor insertVendor(@RequestBody Vendor vendor) {
-        return vendorService.addVendor(vendor);
+    public VendorDTO insertVendor(@RequestBody VendorDTO vendorDTO) {
+        return vendorService.addVendor(vendorDTO);
     }
 
 
     @PutMapping("/{id}")
-    public Vendor updateVendor(@RequestBody Vendor vendor, @PathVariable Long id) {
-        return vendorService.updateVendorById(vendor, id);
+    public VendorDTO updateVendor(@RequestBody VendorDTO vendorDTO, @PathVariable Long id) {
+        return vendorService.updateVendorById(vendorDTO, id);
     }
 
 
