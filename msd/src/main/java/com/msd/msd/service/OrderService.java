@@ -2,6 +2,8 @@ package com.msd.msd.service;
 
 
 import com.msd.msd.entity.Order;
+import com.msd.msd.enums.CustomErrorCode;
+import com.msd.msd.exception.CustomException;
 import com.msd.msd.repository.OrderRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -26,7 +28,7 @@ public class OrderService {
             return orderRepository.save(order);
         } else {
             return optionalOrder
-                    .orElseThrow(() -> new RuntimeException("It failed to find the order with the ID of " + id));
+                    .orElseThrow(() -> new CustomException(CustomErrorCode.UNKNOWN_ERROR));
         }
     }
 
@@ -37,14 +39,14 @@ public class OrderService {
             orderRepository.deleteById(id);
         } else {
             optionalOrder
-                    .orElseThrow(() -> new RuntimeException("It failed to find the order with the ID of " + id));
+                    .orElseThrow(() -> new  CustomException(CustomErrorCode.UNKNOWN_ERROR)));
         }
     }
 
 
     public Order getOrderById(Long id) {
         return orderRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("It failed to find the order with the ID of " + id));
+                .orElseThrow(() -> new CustomException(CustomErrorCode.UNKNOWN_ERROR));
     }
 
 
