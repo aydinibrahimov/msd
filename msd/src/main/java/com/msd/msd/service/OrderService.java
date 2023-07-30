@@ -39,7 +39,7 @@ public class OrderService {
             orderRepository.deleteById(id);
         } else {
             optionalOrder
-                    .orElseThrow(() -> new  CustomException(CustomErrorCode.UNKNOWN_ERROR)));
+                    .orElseThrow(() -> new  CustomException(CustomErrorCode.UNKNOWN_ERROR));
         }
     }
 
