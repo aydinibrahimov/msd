@@ -21,8 +21,8 @@ public class VendorService {
 
     private final VendorReposotory vendorReposotory;
 
-    public VendorResponse getAllVendors(List<VendorDTO> vendorDTOList) {
-        vendorDTOList = vendorReposotory.findAll()
+    public VendorResponse getAllVendors() {
+        List<VendorDTO> vendorDTOList = vendorReposotory.findAll()
                 .stream()
                 .map(vendors -> convertToVendorDTO(vendors))
                 .collect(Collectors.toList());

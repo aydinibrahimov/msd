@@ -2,6 +2,7 @@ package com.msd.msd.controller;
 
 import com.msd.msd.entity.Vendor;
 import com.msd.msd.rest.model.dto.VendorDTO;
+import com.msd.msd.rest.model.response.VendorResponse;
 import com.msd.msd.service.VendorService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -40,7 +41,7 @@ public class VendorController {
 
 
     @GetMapping
-    public List<Vendor> findAllVendors() {
+    public VendorResponse findAllVendors() {
         return vendorService.getAllVendors();
     }
 }
