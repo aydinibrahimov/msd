@@ -24,9 +24,8 @@ public class VendorService {
         return vendorReposotory.findAll();
     }
 
-    public Vendor getVendorById(Long id) {
-        return vendorReposotory.findById(id)
-                .orElseThrow(() -> new RuntimeException("Vendor with ID= " + id + " does not exist"));
+    public VendorDTO getVendorById(Long id) {
+        return convertToVendorDTO(getVendor(id));
     }
 
     public boolean deleteVendorById(Long id) {

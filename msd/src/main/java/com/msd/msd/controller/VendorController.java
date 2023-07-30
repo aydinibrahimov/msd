@@ -1,6 +1,7 @@
 package com.msd.msd.controller;
 
 import com.msd.msd.entity.Vendor;
+import com.msd.msd.rest.model.dto.VendorDTO;
 import com.msd.msd.service.VendorService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -33,7 +34,7 @@ public class VendorController {
 
 
     @GetMapping("/{id}")
-    public Vendor findVendorById(@PathVariable Long id) {
+    public VendorDTO findVendorById(@PathVariable Long id) {
         return vendorService.getVendorById(id);
     }
 
