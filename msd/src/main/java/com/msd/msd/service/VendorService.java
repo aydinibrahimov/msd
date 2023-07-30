@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -20,8 +21,12 @@ public class VendorService {
 
     private final VendorReposotory vendorReposotory;
 
-    public List<Vendor> getAllVendors() {
-        return vendorReposotory.findAll();
+    public VendorResponse getAllVendors(List<VendorDTO> vendorDTOList) {
+        vendorDTOList = vendorReposotory.findAll()
+                .stream()
+                .map(vendors -> convertToVendorDTO(vendors))
+                .collect(Collectors.toList());
+        return makeVendorResponse(vendorDTOList);
     }
 
     public VendorDTO getVendorById(Long id) {
