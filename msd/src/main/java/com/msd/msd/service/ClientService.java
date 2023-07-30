@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @Slf4j
 public class ClientService {
     private final ClientRepository clientRepository;
-    private final MSD_Logging msd_logging;
+
 
     public Client addClient(ClientDTO clientDTO) {
         Client client = new Client();
