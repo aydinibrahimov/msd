@@ -17,9 +17,10 @@ class ClientServiceTest {
 
     @BeforeEach
     void setUp() {
-        clientService= Mockito.mock(ClientService.class);
-        clientResponse= Mockito.mock(ClientResponse.class);
-        clientDTO= Mockito.mock(ClientDTO.class);
+//        clientResponse= Mockito.mock(ClientResponse.class);
+//        clientDTO= Mockito.mock(ClientDTO.class);
         clientRepository=Mockito.mock(ClientRepository.class);
+        clientService=new ClientService(clientRepository);
+
     }
 }
