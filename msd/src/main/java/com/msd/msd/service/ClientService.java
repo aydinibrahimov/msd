@@ -3,7 +3,6 @@ package com.msd.msd.service;
 import com.msd.msd.entity.Client;
 import com.msd.msd.enums.CustomErrorCode;
 import com.msd.msd.exception.CustomException;
-import com.msd.msd.logging.MSD_Logging;
 import com.msd.msd.repository.ClientRepository;
 import com.msd.msd.rest.model.dto.ClientDTO;
 import com.msd.msd.rest.model.response.ClientResponse;
