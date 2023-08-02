@@ -5,7 +5,7 @@ import com.msd.msd.enums.CustomErrorCode;
 import lombok.Getter;
 
 
-@Getter
+
 
 public class CustomException extends RuntimeException {
 
