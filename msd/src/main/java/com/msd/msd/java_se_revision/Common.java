@@ -1,9 +1,13 @@
 package com.msd.msd.java_se_revision;
 
-public class Common implements InterfaceB {
-    public static void main(String[] args) {
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
-        System.out.println( instanceof InterfaceA);
+public class Common implements InterfaceB {
+    public static void main(String[] args) throws IOException {
+
+        FileInputStream f=new FileInputStream("dgdfgf");
 
     }
 

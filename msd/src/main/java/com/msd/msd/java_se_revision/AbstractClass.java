@@ -7,7 +7,6 @@ public abstract class AbstractClass {
         String a = "c";
         String b = "c";
         String c = new String("c");
-        System.out.println("a " + a instanceofb);
         System.out.println("b " + c.equals(b));
         System.out.println("s " + c.equals(a));
 
