@@ -2,11 +2,8 @@ package com.msd.msd.java_se_revision;
 
 import java.io.*;
 
-public class Common implements InterfaceB {
-    public static void main(String[] args) {
+public class Common implements InterfaceA {
 
-        myMethod();
-    }
     public static void myMethod() {
         System.out.println("myMethod");
         myMethod();
@@ -22,8 +19,5 @@ public class Common implements InterfaceB {
 
     }
 
-    @Override
-    public void show() {
 
-    }
 }
