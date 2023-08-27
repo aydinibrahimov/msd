@@ -1,14 +1,16 @@
 package com.msd.msd.java_se_revision;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class Common implements InterfaceB {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        FileInputStream f=new FileInputStream("dgdfgf");
-
+        try {
+            FileInputStream f=new FileInputStream("dgdfgf");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        System.out.println("done");
     }
 
 
