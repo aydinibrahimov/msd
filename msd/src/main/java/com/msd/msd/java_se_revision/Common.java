@@ -5,8 +5,7 @@ import java.io.*;
 public class Common implements InterfaceA {
 
     public static void myMethod() {
-        System.out.println("myMethod");
-        myMethod();
+
     }
 
     @Override
