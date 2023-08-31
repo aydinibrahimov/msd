@@ -6,10 +6,7 @@ import java.util.Stack;
 public class Cava {
 
     public static void main(String[] args) {
-        String expression = "(a+b) [{c[d]}";
-        System.out.println(isBracketsClosed(expression)); // true
-
-
+        System.out.println(Integer.MIN_VALUE);
     }
 
 
