@@ -6,9 +6,9 @@ import java.util.Stack;
 public class Cava {
 
     public static void main(String[] args) {
-        System.out.println(Integer.MIN_VALUE);
-    }
-
+        int a=5;
+        int b=4;
+        System.out.println(Math.max(a,b));}
 
     public static int hourglassSum(List<List<Integer>> arr) {
         int rows = arr.size();
