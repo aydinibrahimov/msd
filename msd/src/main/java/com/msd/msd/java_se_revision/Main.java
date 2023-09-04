@@ -8,13 +8,7 @@ public class Main {
         String maximumValue = null;
         int a = array[0].compareTo(array[1]);
         Arrays.sort(array);
-//        for (int i = 0; i < array.length; i++) {
-//            if (a == 1) {
-//                maximumValue = array[i];
-//                array[i]=array[i+1];
-//                array[i+1]=maximumValue;
-//            }
-//        }
+
         System.out.println(Arrays.toString(array));
 
     }
@@ -48,5 +42,5 @@ public class Main {
 
 
 
-    
+
 }
