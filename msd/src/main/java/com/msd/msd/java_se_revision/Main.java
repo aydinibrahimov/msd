@@ -4,13 +4,39 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        String[] array = {"13", "12", "kj", "tryg", "ytu", "oiuytrsdfxc"};
-        String maximumValue = null;
-        int a = array[0].compareTo(array[1]);
-        Arrays.sort(array);
+        System.out.println(isParenthesesValid("((([salam])))"));
+    }
 
-        System.out.println(Arrays.toString(array));
 
+    public static boolean isParenthesesValid(String s) {
+        Stack<Character> pr = new Stack<>();
+        for (char c : s.toCharArray()) {
+            switch (c) {
+                case '(':
+                    pr.push(c);
+                    break;
+                case '{':
+                    pr.push(c);
+                    break;
+                case '[':
+                    pr.push(c);
+                    break;
+                case ')':
+                    if (pr.empty() || pr.peek() != '(') return false;
+                    else pr.pop();
+                    break;
+                case '}':
+                    if (pr.empty() || pr.peek() != '{') return false;
+                    else pr.pop();
+                    break;
+                case ']':
+                    if (pr.empty() || pr.peek() != '[') return false;
+                    else pr.pop();
+                    break;
+                default: ;
+            }
+        }
+        return pr.isEmpty();
     }
 
 
@@ -38,9 +64,6 @@ public class Main {
         A[i] = A[j];
         A[j] = temp;
     }
-
-
-
 
 
 }
