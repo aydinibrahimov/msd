@@ -4,11 +4,27 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(isParenthesesValid("((([salam])))"));
+        int d = 3;
+        List<Integer> arr = new ArrayList<>();
+
+        arr.addAll(Arrays.asList(1, 2, 3, 4, 5));
+        int j = 0;
+        if (d < arr.size()) {
+            for (int i = d; i < arr.size(); i++) {
+
+                int temp = arr.get(j);
+                arr.add(j, arr.get(d));
+                arr.add(d, temp);
+                j++;
+            }
+
+        }
+        System.out.println(arr);
     }
 
 
     public static boolean isParenthesesValid(String s) {
+
         Stack<Character> pr = new Stack<>();
         for (char c : s.toCharArray()) {
             switch (c) {
@@ -33,7 +49,8 @@ public class Main {
                     if (pr.empty() || pr.peek() != '[') return false;
                     else pr.pop();
                     break;
-                default: ;
+                default:
+                    ;
             }
         }
         return pr.isEmpty();
