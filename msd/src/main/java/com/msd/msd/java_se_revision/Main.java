@@ -1,25 +1,34 @@
 package com.msd.msd.java_se_revision;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        int d = 3;
-        List<Integer> arr = new ArrayList<>();
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
+        System.out.println(isPalindrome(121));
+    }
 
-        arr.addAll(Arrays.asList(1, 2, 3, 4, 5));
-        int j = 0;
-        if (d < arr.size()) {
-            for (int i = d; i < arr.size(); i++) {
+    public static boolean isPalindrome(int x) {
 
-                int temp = arr.get(j);
-                arr.add(j, arr.get(d));
-                arr.add(d, temp);
-                j++;
+        char[] arr = String.valueOf(x).toCharArray();
+        int n = arr.length;
+        for(int i=0;i<n/2+1)
+
+    }
+
+    public static int[] twoSum(int[] nums, int target) {
+        int[] arr = new int[2];
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i; j < nums.length; j++) {
+                int sum = nums[i] + nums[j];
+                if (sum == target && i != j) {
+                    arr[0] = i;
+                    arr[1] = j;
+                }
             }
-
         }
-        System.out.println(arr);
+        return arr;
     }
 
 
