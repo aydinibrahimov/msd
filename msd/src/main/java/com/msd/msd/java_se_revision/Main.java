@@ -4,23 +4,12 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        isValid("(){{[]}");
-        System.out.println(new Integer(int));
+        Stack<String> stack=new Stack<>();
+        System.out.println(stack.empty());
+
     }
 
-    public static boolean isValid(String s) {
-        Stack<Character> pharentheses = new Stack();
-        int n = s.length();
-        String[] arr = new String[n];
-        for (int i = 0; i < n; i++) {
-            pharentheses.push(s.charAt(i));
-        }
-        for(char c:pharentheses){
 
-        }
-
-        return true;
-    }
 
     public static boolean isPalindrome(int x) {
         String s = String.valueOf(x);
