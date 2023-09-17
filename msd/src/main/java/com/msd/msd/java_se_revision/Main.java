@@ -1,14 +1,97 @@
 package com.msd.msd.java_se_revision;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
-        Stack<String> stack=new Stack<>();
-        System.out.println(stack.empty());
+        int[] array = {2,5,1,3,4,7};
+        for (int a : shuffle(array,3)) {
+            System.out.print(a + " ");
+        }
+    String s="";
+        s.charAt(5);
+        StringBuilder s=new StringBuilder();
+        char c=s.charAt(2);
+        if(c=='.'){
 
+        }
+    }
+    public static int[] shuffle(int[] nums, int n) {
+        int[] array=new int[2*n];
+        for(int i=0;i<n;i=i+2){
+
+
+
+
+        }
+        return array;
+    }
+    public static int[] buildArray(int[] nums) {
+        int n = nums.length;
+        for (int i = 0; i < 5; i++) {
+            int k = nums[i];
+            nums =mySwap(nums,i,k);
+
+        }
+        return nums;
     }
 
+    public static int[] mySwap(int[] nums, int a, int b) {
+        int temp = nums[a];
+        nums[a]=nums[b];
+        nums[b]=temp;
+        return nums;
+    }
+
+    public static int finalValueAfterOperations(String[] operations) {
+
+
+        int x = 0;
+        for (int i = 0; i < operations.length; i++) {
+            switch (operations[i]) {
+                case "X++":
+                    x++;
+                    break;
+                case "++X":
+                    ++x;
+                    break;
+                case "X--":
+                    x--;
+                    break;
+                case "--X":
+                    --x;
+                    break;
+                default:
+                    System.out.println("no operation");
+                    break;
+            }
+        }
+        return x;
+    }
+
+
+    public static int maxProfit(Integer[] prices) {
+        List<Integer> ls = Stream.of(prices).collect(Collectors.toList());
+        Arrays.sort(prices);
+        int n = prices.length;
+        System.out.println("gggg" + ls.indexOf(prices[n - 1]));
+        for (int i = 0; i < n - 1; i++) {
+
+        }
+
+
+        int profit = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int k = prices[j] - prices[i];
+                if (k > profit)
+                    profit = k;
+            }
+        }
+        return profit;
+    }
 
 
     public static boolean isPalindrome(int x) {
